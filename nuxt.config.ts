@@ -12,4 +12,10 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
   ],
+  image: {
+    glide: {
+      // baseURL of your laravel application
+      baseURL: 'https://glide.herokuapp.com/1.0/'
+    }
+  }
 })

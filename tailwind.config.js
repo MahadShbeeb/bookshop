@@ -9,8 +9,12 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
-  },
+    extend: {
+        scale: {
+            '-100': '-1',
+        }
+    }
+},
   plugins: [],
 }
 

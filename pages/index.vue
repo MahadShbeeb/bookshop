@@ -1,62 +1,33 @@
 <template>
-  <nav class="border-b-2 border-gray-900">
-      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <NuxtLink class="font-bold text-2xl lg:text-xl" to="/">
-          BOOKSHOP
-        </NuxtLink>
-        <div class="block lg:hidden" @click="isOpen!=isOpen">
-          <button class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:block ">
-          <ul class="inline-flex"
-          v-for="(item,index) in navItems" :key="index" >
-
-            <li><NuxtLink :to="`/${item.link}`" class="px-4">{{ item.name }}</NuxtLink></li>
-
-          </ul>
-          
-        </div>
-        <Button class="bg-yellow-50 text-gray-700 border-2 border-gray-700
-        px-1.5 py-1 font-semibold text-sm">
-          Create account
-        </Button>
-        
-      </div>
-    </nav>
-
-      <div  class=" py-20 px-10 grid md:grid-cols-2 sm:grid-cols-1 gap-5 ">
-      <div class="container mx-auto px-6 pt-20 order-2 space-y-5">
-        <h2 class="text-4xl font-bold mb-2 text-gray-900">
+      <div  class=" py-20 px-10 grid md:grid-cols-2 sm:grid-cols-1 gap-5  ">
+      <div class="container mx-auto px-6 pt-10 order-1 space-y-5">
+        <h2 class="font-bold mb-2 text-3xl md:text-4xl text-gray-900">
           Feast your eyes on a good book!
         </h2>
-        <h3 class="text-xl mb-8 text-gray-700">
+        <h3 class="text-md md:text-xl mb-8 text-gray-700">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rerum porro nisi,
           ratione nesciunt dolorum praesentium commodi sed! Pariatur animi omnis 
           consectetur voluptas qui atque voluptate possimus aut praesentium alias.
         </h3>
 
-        <Button class="bg-yellow-400 px-3 py-1.5 text-gray-700 border-2
-        border-gray-900 shadow-md font-bold text-sm">
+        <Button class="border-2 border-gray-900 shadow-[3px_3px_0px_0px_rgba(10,18,18)]
+        bg-yellow-400 px-3 py-1.5 text-gray-700 font-bold text-sm duration-500 hover:scale-105">
           Start Exploring
         </Button>
       </div>
-      <div class="firstimage order-1 h-screen bg-center bg-cover max-w-full ">
+     
+      <div class="first-image transform -scale-x-100 order-2 h-screen bg-center 
+      bg-cover max-w-full ">
       </div>
       
     </div>
 
-    <div>
-      <div class="gradbox">
-        <div class="grid grid-cols-4 gap-2">
-        <div class=" text-center pt-10">
+    <div class="bg-gray-900 py-20 pr-10 ">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 pb-10 ">
+        <div class=" text-center pt-10 ">
           <div class="text-xl bg-white w-10 h-10 
           flex justify-center items-center rounded-full mb-6 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
             <path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"/></svg>
         </div>
         <p class="text-md font-semibold text-white mb-5">Free delivery</p>
@@ -65,10 +36,8 @@
               Molestiae odio porro at sequi, vel quia corporis ex deserunt, animi, voluptates eveniet.
         </p>
         </div>
-
-
         
-        <div class=" text-center pt-10">
+        <div class=" text-center pt-10 ">
           <div class="text-xl bg-white w-10 h-10 
           flex justify-center items-center rounded-full mb-6 mx-auto">
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M3.848 19h-.848c-.796 0-1.559-.316-2.121-.879-.563-.562-.879-1.325-.879-2.121v-3c0-7.175 5.377-13 12-13s12 5.825 12 13v3c0 .796-.316 1.559-.879 2.121-.562.563-1.325.879-2.121.879h-.848c-2.69 4.633-6.904 5-8.152 5-1.248 0-5.462-.367-8.152-5zm16.152-5.876c-.601.236-1.269-.18-1.269-.797 0-.304-.022-.61-.053-.915-1.761-.254-3.618-1.926-3.699-3.723-1.315 2.005-4.525 4.17-7.044 4.17 1.086-.699 1.839-2.773 1.903-3.508-.581 1.092-2.898 3.136-4.551 3.487l-.018.489c0 .619-.669 1.032-1.269.797v3.771c.287.256.632.464 1.041.594.225.072.412.224.521.424 2.206 4.046 5.426 4.087 6.438 4.087.929 0 3.719-.035 5.877-3.169-1.071.433-2.265.604-3.759.653-.37.6-1.18 1.016-2.118 1.016-1.288 0-2.333-.784-2.333-1.75s1.045-1.75 2.333-1.75c.933 0 1.738.411 2.112 1.005 1.9-.026 4.336-.334 5.888-2.645v-2.236zm-11-.624c.686 0 1.243.672 1.243 1.5s-.557 1.5-1.243 1.5-1.243-.672-1.243-1.5.557-1.5 1.243-1.5zm6 0c.686 0 1.243.672 1.243 1.5s-.557 1.5-1.243 1.5-1.243-.672-1.243-1.5.557-1.5 1.243-1.5zm5.478-1.5h1.357c-.856-5.118-4.937-9-9.835-9-4.898 0-8.979 3.882-9.835 9h1.357c.52-4.023 3.411-7.722 8.478-7.722s7.958 3.699 8.478 7.722z"/></svg>
@@ -103,87 +72,38 @@
               Molestiae odio porro at sequi, vel quia corporis ex deserunt, animi, voluptates eveniet.
         </p>
         </div>
-        </div>
-
-        <div class=" grid grid-cols-4 pt-10 ml-10">
-        <div class="relative pt-10 grid h-[30rem] w-full max-w-[18rem] flex-col 
-        items-end justify-center overflow-hidden bg-white border-4 border-gray-900 
-        text-center text-gray-700">
-  <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none 
-  bg-transparent bookimage
-  bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
-    <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
-  </div>
-  <div class="relative p-6 px-6 py-14 md:px-12">
-    <h2 class="mb-6 block text-2xl text-white font-extralight">
-      Book title
-    </h2>
-    <h5 class="block mb-4 font-sans text-md font-light text-gray-200">
-      Auther name
-    </h5>
-  </div>
-</div>
-
-<div class="relative pt-10 grid h-[30rem] w-full max-w-[18rem] flex-col 
-        items-end justify-center overflow-hidden bg-white border-4 border-gray-900 
-        text-center text-gray-700">
-  <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none 
-  bg-transparent bookimage
-  bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
-    <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
-  </div>
-  <div class="relative p-6 px-6 py-14 md:px-12">
-    <h2 class="mb-6 block text-2xl text-white font-extralight">
-      Book title
-    </h2>
-    <h5 class="block mb-4 font-sans text-md font-light text-gray-200">
-      Auther name
-    </h5>
-  </div>
-</div>
-<div class="relative pt-10 grid h-[30rem] w-full max-w-[18rem] flex-col 
-        items-end justify-center overflow-hidden bg-white border-4 border-gray-900 
-        text-center text-gray-700">
-  <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none 
-  bg-transparent bookimage
-  bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
-    <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
-  </div>
-  <div class="relative p-6 px-6 py-14 md:px-12">
-    <h2 class="mb-6 block text-2xl text-white font-extralight">
-      Book title
-    </h2>
-    <h5 class="block mb-4 font-sans text-md font-light text-gray-200">
-      Auther name
-    </h5>
-  </div>
-</div>
-<div class="relative pt-10 grid h-[30rem] w-full max-w-[18rem] flex-col 
-        items-end justify-center overflow-hidden bg-white border-4 border-gray-900 
-        text-center text-gray-700">
-  <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none 
-  bg-transparent bookimage
-  bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
-    <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
-  </div>
-  <div class="relative p-6 px-6 py-14 md:px-12">
-    <h2 class="mb-6 block text-2xl text-white font-extralight">
-      Book title
-    </h2>
-    <h5 class="block mb-4 font-sans text-md font-light text-gray-200">
-      Auther name
-    </h5>
-  </div>
-</div>
-        </div>
-      </div>
+    
+    </div>
     </div>
 
-    <div class="bestbook grid md:grid-cols-2 sm:grid-cols-1 gap-5">
-      <div class="  bookimage h-100 object-fill bg-center bg-cover max-w-full ">
+<div class="flex flex-col category pt-10 bg-white m-auto p-auto">
+  <h1 class="flex justify-center py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 
+  font-bold text-2xl md:text-4xl pb-10 text-gray-800"
+      >Explore our categories</h1>
+      <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+        <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 space-x-10 ">
+          <Category/>
+          <Category/>
+          <Category/>
+          <Category/>
+          <Category/>
+          <Category/>
+          <Category/>
+          <Category/>
+          <Category/>
+        </div>
       </div>
-      <div class="container mx-auto px-6 pt-20 order-2 space-y-5">
-        <h2 class="text-4xl font-semibold mb-2 text-white">
+</div>
+
+
+
+    <div class="grid lg:grid-cols-2 md:grid-cols-1 pt-10 bg-gray-900">
+      <div class="order-1 object-scale-down h-100 w-75 mx-20 my-10 ">
+            <img  src="https://images.unsplash.com/photo-1571167530149-c1105da4c2c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80" />
+      </div>
+     
+      <div class="container mx-auto px-6 pt-20 order-2 space-y-5 pb-20  ">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-2 font-sans text-white">
           Best selling book of the month!
         </h2>
         <div class="flex gap-0.5">
@@ -214,127 +134,42 @@
     </svg>
 </div>
 
-        <p class="text-md mb-8 text-gray-50">
+        <p class="text-md md:text-xl mb-8 pt-5 text-gray-50 ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rerum porro nisi,
           ratione nesciunt dolorum praesentium commodi sed! Pariatur animi omnis 
           consectetur voluptas qui atque voluptate possimus aut praesentium alias.
         </p>
         <p class="text-gray-200">By author </p>
+        <Button class="border-2 border-gray-900 shadow-[3px_3px_0px_0px_rgba(10,18,18)] 
+        bg-yellow-400 px-3 py-1.5 text-gray-700 font-bold text-sm
+         duration-500 hover:scale-105">
+          Buy now
+        </Button>
       </div>
-    </div>
-
-  
-
-  
-
-<section class="bg-white">
-    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-        <footer class="flex flex-wrap justify-center -mx-5 -my-2">
-            <div class="px-5 py-2" v-for="(item,index) in footerItems" :key="index" >
-                <NuxtLink :to="`/${item.link}`"
-                class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    {{item.name}}
-                </NuxtLink>
-            </div> 
-            
-        </footer>
-          <footer class="flex flex-wrap justify-center -mx-5 -my-2">
-            <div class="px-5 py-2" v-for="(item,index) in secondFooterItems" :key="index" >
-                <NuxtLink :to="`/${item.link}`"
-                class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    {{item.name}}
-                </NuxtLink>
-            </div> 
-            
-        </footer>
-        
-    </div>
-</section>
+    </div>     
 
 </template>
 
 <script setup>
-let isOpen=ref(false);
 
-const navItems = [
-	{
-        name: "Home",
-        link: "",
-	},
-    {
-        name: "Categories",
-        link: "",
-	},
-    {
-        name: "About us",
-        link: "",
-	},
-    {
-        name: "Contact",
-        link: "",
-	},
-    {
-        name: "FAQ",
-        link: "",
-	}
-];
 
-const footerItems = [
-	{
-        name: "Home",
-        link: "",
-	},
-    {
-        name: "Categories",
-        link: "",
-	},
-    {
-        name: "About us",
-        link: "",
-	},
-    {
-        name: "Pricing",
-        link: "",
-	},
-    {
-        name: "Team",
-        link: "",
-	},
-    {
-        name: "Blog",
-        link: "",
-	}
-]
-const secondFooterItems = [
-	{
-        name: "Privacy polices ",
-        link: "",
-	},
-    {
-        name: "Term and conditions ",
-        link: "",
-	},
-    {
-        name: "Contact us",
-        link: "",
-	}
-];
 </script>
 
 <style scoped>
-.gradbox {
- height: 750px;
- background-color: white; 
- background-image: linear-gradient(to bottom, rgb(18, 18, 18) 50%, rgba(0,0,0,0) 50%); 
+.category{
+  height: 600px;
 }
-.bestbook{
-  height: 500px;
-  background-color: rgb(18, 18, 18); 
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.bookimage{
-  background-image: url('assets/images/Mark.jpg') ;
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
 }
-.firstimage{
+
+.first-image{
   background-image: url('assets/images/reading.png') ;
+  
 }
+
 </style>
