@@ -24,6 +24,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@nuxtjs/supabase": "^1.1.4",
     "@pinia/nuxt": "^0.5.1",
     "pinia": "^2.1.7"
   }

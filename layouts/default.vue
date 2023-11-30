@@ -24,7 +24,7 @@
         </div>
         <Button class="bg-yellow-50 text-gray-700 border-2 border-gray-700
         px-1.5 py-1 font-semibold text-sm duration-500 hover:scale-105">
-         <NuxtLink to="/login"> Create account</NuxtLink>
+         <NuxtLink to="/signup"> Create account</NuxtLink>
         </Button>
         
       </div>
@@ -63,7 +63,7 @@
 
 <script setup>
 let isOpen=ref(false);
-
+let isLogedIn=ref(false)
 const navItems = [
 	{
         name: "Home",
@@ -71,7 +71,7 @@ const navItems = [
 	},
     {
         name: "Books",
-        link: "/books",
+        link: "books",
 	},
     {
         name: "About us",
@@ -127,5 +127,10 @@ const secondFooterItems = [
         link: "",
 	}
 ];
+
+const user = useSupabaseUser();
+    if (user.value){
+        isLogedIn=true
+    }
 
 </script>

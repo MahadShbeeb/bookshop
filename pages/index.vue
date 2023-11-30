@@ -152,7 +152,14 @@
 
 <script setup>
 
+// const user=useSupabaseUser();
 
+// console.log(user)
+
+// console.log(user.ssupabase_user)
+// if (!user.value){
+// navigateTo('/')
+// }
 </script>
 
 <style scoped>

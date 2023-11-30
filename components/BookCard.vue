@@ -8,7 +8,7 @@
   </div>
   <div class="p-6">
     <h4 class="block font-sans text-2xl  font-semibold text-blue-gray-900">
-      Book Category
+      Book Title
     </h4>
     <p class="block mt-3 font-sans text-md text-gray-700">
       loram
