@@ -1,7 +1,7 @@
 <template>
     <section class="">
   <div class="container grid md:grid-cols-2 sm:grid-cols-1 gap-5 h-full px-6 py-24">
-    <div class="first-image order-1 bg-center bg-cover max-w-full h-screen
+    <div class="first-image order-1 bg-right bg-cover max-w-full h-screen
       g-6 ">     
     </div>
     <div class="order-2 pt-20 px-10">
@@ -76,7 +76,7 @@ async function registerUser() {
 
 <style scoped>
 .first-image{
-  background-image: url('assets/images/bookshelves.png') ;
+  background-image: url('assets/images/knowledge.png') ;
   
 }
 </style>

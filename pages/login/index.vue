@@ -53,12 +53,13 @@ async function signInUser() {
       email: emailAddress,
       password: password,
     });
+        console.log(data)
+
     if (error) throw error;
 
     router.push('/profile')
   } catch (error) {
     errorMsg = error.message
-    console.log(error.message)
   }
 }
 

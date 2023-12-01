@@ -14,10 +14,11 @@
         </div>
         <div class="hidden lg:block ">
         <div class="w-full max-w-xs xl:max-w-lg 2xl:max-w-2xl bg-gray-100 rounded-md hidden xl:flex items-center">
-      <select class="bg-transparent uppercase font-bold text-sm p-4 mr-4" name="" id="">
+      <select class="outline-none bg-transparent uppercase font-bold text-sm p-4 mr-4" name="" id="">
         <option>all categories</option>
+
       </select>
-      <input class="border-l border-gray-300 bg-transparent font-semibold text-sm pl-4"
+      <input class="border-l outline-none border-gray-300 bg-transparent font-semibold text-sm pl-4"
        type="text" placeholder="I'm searching for ...">
       <svg class="ml-auto h-5 px-4 text-gray-500" aria-hidden="true" focusable="false" 
       data-prefix="far" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" 
