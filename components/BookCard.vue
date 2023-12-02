@@ -40,7 +40,5 @@ let isFav = ref(false);
 
 <style scoped>
 
-.book-image{
-  background-image: url('assets/images/Mark.jpg') ;
-}
+
 </style>
