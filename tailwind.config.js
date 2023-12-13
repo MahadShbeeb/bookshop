@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+
+
 export default {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -9,11 +12,19 @@ export default {
     "./error.vue",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Montserrat"],
+      serif: ["Montserrat"],
+      mono: ["Montserrat"],
+      display: ["Montserrat"],
+      body: ["Montserrat"]
+    },
     extend: {
         scale: {
             '-100': '-1',
         }
     },
+
 },
   plugins: [],
 }

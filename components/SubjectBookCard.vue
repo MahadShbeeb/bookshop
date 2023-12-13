@@ -38,10 +38,9 @@ const bookStore = useBooksStore()
 
 await bookStore.fetchBookCoverByTitle(book.title)
 
-let authorName = book.author_name?book.author_name[0]:'the author name is not available';
+let authorName= book.authors ?book.authors[0]['name'] :'the author name is not available';
 
-let img = book.isbn? 'https://covers.openlibrary.org/b/isbn/'+book.isbn[0]+'-M.jpg':''
-
+let img = bookStore.imgIsbn?'https://covers.openlibrary.org/b/isbn/'+bookStore.imgIsbn+'-M.jpg':''
 </script>
 
 <style scoped>

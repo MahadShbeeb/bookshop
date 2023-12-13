@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @font-face {
+    font-family: "Roboto Mono";
+    src: local("Roboto Mono"),
+    url('./assets/fonts/Roboto Mono/RobotoMono-Regular.ttf');
+ } 
+
+
+html {
+    font-family: "Roboto Mono";
+} */

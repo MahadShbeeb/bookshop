@@ -1,0 +1,44 @@
+
+
+
+<template>
+     
+   <div class="w-full h-screen">
+    
+     <div v-if="bookStore.isLoading" class="w-full h-screen absolute bg-white 
+    bg-opacity-60 z-10 flex items-center justify-center">
+    <div class="flex items-center">
+        <div class="flex items-center justify-center h-screen">
+    <div class="relative">
+        <div class="h-24 w-24 rounded-full border-t-8 border-b-8 border-gray-300"></div>
+        <div class="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8
+         border-[#F9A826] animate-spin">
+        </div>
+    </div>
+</div>
+    </div>
+  </div>
+<div class="py-20 px-10 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 
+sm:grid-cols-1 gap-5 flex justify-center ">
+
+    <div class="" v-for="book in bookStore.booksBySearch" :key="book.key">
+        <BookCard :book='book' />
+    </div>
+    </div>
+   </div>
+
+</template>
+
+
+<script setup>
+
+
+import { useBooksStore } from '../store/books.js';
+const bookStore = useBooksStore()
+
+
+</script>
+
+<style scoped>
+
+</style>

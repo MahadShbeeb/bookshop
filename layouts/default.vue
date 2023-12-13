@@ -1,9 +1,8 @@
 <template>
    <nav class="border-b-2 border-gray-900">
       <div class="container mx-auto px-6 py-5 flex justify-between items-center">
-        <NuxtLink class="font-bold text-2xl lg:text-xl duration-500 hover:scale-105" to="/">
-          BOOKSHOP
-        </NuxtLink>
+        <NuxtLink class="font-bold text-2xl lg:text-xl uppercase duration-500 hover:scale-105" to="/">
+        booklibrary</NuxtLink>
         <div class="block lg:hidden" @click="isOpen=!isOpen">
           <button class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
             <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -27,10 +26,8 @@
 		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
 		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
 			<div class="flex items-center mb-8">
-				<NuxtLink class="mr-auto text-2xl font-bold  
-                lg:text-xl duration-500 hover:scale-105" to="/">
-					BOOKSHOP
-				</NuxtLink>
+				<NuxtLink class="mr-auto text-2xl font-bold lg:text-xl uppercase
+                duration-500 hover:scale-105" to="/">booklibrary</NuxtLink>
 				<button class="navbar-close" @click="isOpen=false">
 					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -75,10 +72,15 @@
 
     <div class="">
     <slot/>
+    
     </div>
-<div class="border-t-2 border-gray-900 ">
- <section class="bg-gray-50 ">
-    <div class=" max-w-screen-xl   px-4 py-12 mx-auto space-y-8  sm:px-6 lg:px-8">
+
+   
+
+
+<!-- <div class="pt-96">
+    <section class=" bg-gray-50 border-t-2 border-gray-900 ">
+    <div class=" px-4 py-12 mx-auto space-y-8  sm:px-6 lg:px-8">
         <footer class="flex flex-wrap justify-center -mx-5 -my-2 hover:text-gray-500">
             <div class="px-5 py-2" v-for="(item,index) in footerItems" :key="index" >
                 <NuxtLink :to="`/${item.link}`"
@@ -86,22 +88,12 @@
                     {{item.name}}
                 </NuxtLink>
             </div> 
-            
-         </footer>
-         <footer class="flex flex-wrap justify-center -mx-5 -my-2 ">
-            <div class="px-5 py-2" v-for="(item,index) in secondFooterItems" :key="index" >
-                <NuxtLink :to="`/${item.link}`"
-                class="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    {{item.name}}
-                </NuxtLink>
-            </div> 
-            
-        </footer> 
-        
+        </footer>
     </div>
 </section>
-    </div>
-   
+</div> -->
+
+
 </template>
 
 <script setup>
@@ -111,7 +103,6 @@ let isLoggedIn = ref(false)
 
 const user = useSupabaseUser();
     if (user.value){
-        console.log(user)
         isLoggedIn=true
     }
 
@@ -126,11 +117,15 @@ const navItems = [
         link: "books",
 	},
     {
-        name: "About us",
-        link: "",
+        name: "Subjects",
+        link: "subjects",
 	},
     {
-        name: "Contact",
+        name: "Authors",
+        link: "authors",
+	},
+    {
+        name: "About us",
         link: "",
 	},
     {
@@ -165,21 +160,12 @@ const footerItems = [
         link: "",
 	}
 ]
-const secondFooterItems = [
-	{
-        name: "Privacy polices ",
-        link: "",
-	},
-    {
-        name: "Term and conditions ",
-        link: "",
-	},
-    {
-        name: "Contact us",
-        link: "",
-	}
-];
+
 
 
 
 </script>
+
+<style >
+
+</style>

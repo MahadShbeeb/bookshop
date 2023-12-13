@@ -70,7 +70,6 @@ async function signOutUser() {
     router.push('/login')
   } catch (error) {
     errorMsg = error.message
-    console.log(error.message)
   }
 };
 

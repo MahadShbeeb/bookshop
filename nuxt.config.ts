@@ -12,14 +12,15 @@ export default defineNuxtConfig({
   },
   modules: [
     '@pinia/nuxt',
-    '@nuxtjs/supabase'
+    '@nuxtjs/supabase',
+    'nuxt-swiper',
   ],
-  image: {
-    glide: {
-      baseURL: 'https://glide.herokuapp.com/1.0/'
-    }
+  swiper:{
+    modules: ['navigation', 'pagination','a11y','scrollbar','keyboard'],
+    
   },
   supabase: {
     redirect: false,
-  }
+  },
+
 })

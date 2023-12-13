@@ -54,7 +54,6 @@ async function registerUser() {
       email: emailAddress,
       password: password,
     });
-    console.log(data)
     if (error) throw error;
 
 
@@ -62,15 +61,11 @@ async function registerUser() {
   } catch (error) {
     errorMsg = errorMsg ?error.message : "Error signing up";
   }
-  console.log(successMsg)
-  console.log(error.message)
+
 
 }
 
-// const user=useSupabaseUser();
-// if (user.value){
-// navigateTo('/books')
-// }
+
 
 </script>
 

@@ -1,7 +1,7 @@
 <template>
 <section class="">
   <div class="container grid md:grid-cols-2 sm:grid-cols-1 gap-5 h-full px-6 py-24">
-    <div class="first-image order-1 bg-center bg-cover max-w-full h-screen
+    <div class="first-image flex-shrink-0 order-1 bg-center bg-cover max-w-full h-screen
       g-6 ">     
     </div>
     <div class="order-2 pt-20 px-10">
@@ -53,7 +53,6 @@ async function signInUser() {
       email: emailAddress,
       password: password,
     });
-        console.log(data)
 
     if (error) throw error;
 
@@ -68,7 +67,6 @@ async function signOutUser() {
   const { error } = await client.auth.signOut();
 
   if (error) {
-    console.error(error);
     return;
   }
 

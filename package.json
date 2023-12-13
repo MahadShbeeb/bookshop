@@ -26,6 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@nuxtjs/supabase": "^1.1.4",
     "@pinia/nuxt": "^0.5.1",
+    "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7"
   }
 }
