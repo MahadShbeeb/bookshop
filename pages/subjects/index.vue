@@ -10,7 +10,7 @@
     :space-between="10"
     :pagination="{ clickable: true }"
     @swiper="onSwiper"
-    :breakpoints="{200:{ slidesPerView:1 },300:{ slidesPerView:2 },500:{ slidesPerView:3 },
+    :breakpoints="{100:{ slidesPerView:1 },300:{ slidesPerView:2 },500:{ slidesPerView:3 },
       700:{ slidesPerView:4 },900:{ slidesPerView:5 }, 1000:{ slidesPerView:6 } }">
 
     <div class="flex justify-between my-10 mx-0 ">
