@@ -1,16 +1,14 @@
 <template>
-    <div class="border-2 border-gray-900 shadow-[4px_4px_2px_2px_rgba(10,18,18)]
-    duration-500 hover:scale-105 relative flex max-w-[18rem] flex-col rounded-none
-  bg-white text-gray-700 ">
-    
+    <div class="border-2 border-gray-900 shadow-[3px_3px_0px_0px_rgba(10,18,18)] duration-500 
+    hover:scale-105 relative flex max-w-[18rem] flex-col rounded-none bg-white text-gray-700 ">  
     <div class=" m-0 text-gray-700 rounded-none ">
-    <img class=" object-contain h-48 w-96 " :src="img" /> 
+    <img class=" object-contain h-60 w-80 " :src="img" /> 
   </div>
   <div class="p-6">
-    <h4 class="block font-sans text-2xl  font-semibold text-blue-gray-900 truncate">{{ book.title }}</h4>
-    <p class="block mt-3 font-sans text-md text-gray-700">{{ authorName }}</p>
-    <p class="block mt-3 font-sans text-md text-gray-500"
-    v-if="book.number_of_pages_median">{{ book.number_of_pages_median }} Pages</p>
+    <h4 class="block font-sans text-2xl font-semibold text-blue-gray-900 truncate">{{ book.title }}</h4>
+    <p class="block mt-3 font-sans text-sm text-gray-700 uppercase">by {{ authorName }}</p>
+    <!-- <p class="block mt-3 font-sans text-md text-gray-500"
+    v-if="book.number_of_pages_median">{{ book.number_of_pages_median }} Pages</p> -->
   </div>
   <div class="flex items-center justify-between p-6">
     <div class="flex items-center  space-x-3">

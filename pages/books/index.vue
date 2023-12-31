@@ -97,7 +97,7 @@ await bookStore.fetchSearchedBook(searchedInput)
 <swiper-slide class="px-10" 
 v-for="book in classicBooks['works']" :key="book.key">
   <div class="bg-white rounded-none ">
-    <BookCard :book='book'/>
+    <SubjectBookCard :book='book'/>
   </div>
   
 </swiper-slide>
@@ -140,7 +140,7 @@ v-for="book in classicBooks['works']" :key="book.key">
 <swiper-slide class="px-10" 
  v-for="book in ancientCivilizationBooks['works']" :key="book.key">
   <div class="bg-white rounded-none ">
-    <BookCard :book='book'/>
+    <SubjectBookCard :book='book'/>
   </div>
   
 </swiper-slide>
